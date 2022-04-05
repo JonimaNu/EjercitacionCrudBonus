@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDITAR PELICULA</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <form action="/movies/edit/<%= movie.id %>?_" method="PUT">
+        <h3>FORMULARIO DE EDICIÓN</h3>
+        <div>
+            <br>
+            <label for="title" class="form-label">Titulo:</label>
+            <textarea id="title" name="title" class="form-input"><%= movie.title%></textarea>
+        </div>
+
+        <div>
+            <br>
+            <label for="rating" class="form-label">Rating:</label>
+            <textarea id="rating" name="rating" class="form-input"><%= movie.rating%></textarea>
+        </div>
+
+        <div>
+            <br>
+            <label for="awards" class="form-label">Awards:</label>
+            <textarea type="text" id="awards" name="awards" class="form-input"><%= movie.awards%></textarea>
+        </div>
+
+        <div>
+            <br>
+            <label for="length" class="form-label">Length:</label>
+            <textarea type="text" id="length" name="length" class="form-input"><%= movie.length%></textarea>
+        </div>
+
+        <div>
+            <br>
+            <label for="release_date" class="form-label">Release Date:</label>
+            <textarea type="text" id="release_date" name="release_date" class="form-input"><%= movie.release_date%></textarea>
+        </div>
+
+        <div>
+            <br>
+            <button type="submit" class="buy-now-button">Guardar</button>
+        </div>
+    </form>
+</body>
+
+</html>

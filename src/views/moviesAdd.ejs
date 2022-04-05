@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        FORMULARIO DE CREACION
+    </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <br>
+    <br>
+    <form action="/movies/create" method="post">
+        <h1>
+            <br> FORMULARIO DE CREACIÓN
+            <br>
+
+        </h1>
+
+        <br>
+
+        <div>
+            <br>
+            <label for="title" class="form-label">Titulo:</label>
+            <input type="text" id="title" name="title" class="form-input">
+            <% if(locals.errors && locals.errors.title){ %>
+                <span> <%= errors.title.msg  %> </span>
+                <% } %>
+        </div>
+
+        <div>
+            <br>
+            <label for="rating" class="form-label">Rating:</label>
+            <input type="text" id="rating" name="rating" class="form-input">
+            <% if(locals.errors && locals.errors.rating){ %>
+                <span> <%= errors.rating.msg  %> </span>
+                <% } %>
+        </div>
+
+        <div>
+            <br>
+            <label for="awards" class="form-label">Awards:</label>
+            <input type="text" id="awards" name="awards" class="form-input">
+            <% if(locals.errors && locals.errors.awards){ %>
+                <span> <%= errors.awards.msg  %> </span>
+                <% } %>
+        </div>
+
+        <div>
+            <br>
+            <label for="length" class="form-label">Length:</label>
+            <input type="text" id="length" name="length" class="form-input">
+            <% if(locals.errors && locals.errors.length){ %>
+                <span> <%= errors.length.msg  %> </span>
+                <% } %>
+        </div>
+
+        <div>
+            <br>
+            <label for="release_date" class="form-label">Release Date:</label>
+            <input type="text" id="release_date" name="release_date" class="form-input">
+            <% if(locals.errors && locals.errors.release_date){ %>
+                <span> <%= errors.release_date.msg  %> </span>
+                <% } %>
+        </div>
+
+        <button type="submit " class="buy-now-button">Agregar</a><br> </button>
+    </form>
+</body>
+
+</html>
